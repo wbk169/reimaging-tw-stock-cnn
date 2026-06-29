@@ -1,0 +1,42 @@
+experiment_name: baseline_ohlc
+data:
+  market: Taiwan stocks
+  train_start: 2008-01-01
+  train_end: 2014-12-31
+  val_start: 2015-01-01
+  val_end: 2017-12-31
+  test_start: 2018-01-01
+  test_end: 2025-12-31
+  cost_bps: 5
+
+image:
+  variant: ohlc
+  window: 20
+  horizon: 5
+  height: 64
+  width: 60
+  ohlc_bar_width: 3
+
+model:
+  type: cnn
+  channels: 1
+  learning_rate: 0.00001
+  batch_size: 128
+  epochs: 20
+  patience: 2
+  seed: 42
+
+hardware:
+  device: cuda
+  amp: true
+  num_workers: 8
+  pin_memory: true
+
+evaluation:
+  metrics:
+    - auc
+    - annual_return
+    - sharpe
+    - mdd
+    - t_stat
+    - bootstrap_pvalue

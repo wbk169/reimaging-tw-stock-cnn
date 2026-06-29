@@ -1,0 +1,5 @@
+experiment_name,model,seed,window,horizon,height,channels,auc,sharpe,t_stat,status,note
+baseline_ohlc_seed42,OHLC_single,42,20,5,64,1,,,,pending,
+chen_dual_channel_seed42,Chen_dual_channel,42,20,5,64,2,,,,running,
+chip_3ch_clip16_seed42,Chip_3ch_clip16,42,20,5,64,3,,,,pending,
+chip_3ch_clip20_seed42,Chip_3ch_clip20,42,20,5,64,3,,,,pending,

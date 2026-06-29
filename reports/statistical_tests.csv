@@ -1,0 +1,11 @@
+model,test_name,null_hypothesis,statistic,p_value,interpretation
+OHLC_single,t-test,D10-D1 mean return equals zero,,,
+OHLC_single,bootstrap_random_sorting,model ranking equals random ranking,,,
+OHLC_single,seed_robustness,performance is unstable across seeds,,,
+Chen_dual_channel,t-test,D10-D1 mean return equals zero,,,
+Chen_dual_channel,bootstrap_random_sorting,model ranking equals random ranking,,,
+Chen_dual_channel,seed_robustness,performance is unstable across seeds,,,
+Chip_3ch_clip16,t-test,D10-D1 mean return equals zero,,,
+Chip_3ch_clip16,bootstrap_random_sorting,model ranking equals random ranking,,,
+Chip_3ch_clip20,t-test,D10-D1 mean return equals zero,,,
+Chip_3ch_clip20,bootstrap_random_sorting,model ranking equals random ranking,,,

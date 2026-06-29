@@ -1,0 +1,6 @@
+model,window,horizon,height,channels,auc,d10_d1_annual_return,d10_d1_annual_vol,d10_d1_sharpe,mdd,win_rate,t_stat,bootstrap_pvalue,turnover,cost_bps,test_period
+OHLC_single,20,5,64,1,,,,,,,,,,5,2018-2025
+OHLC_MA,20,5,64,1,,,,,,,,,,5,2018-2025
+Chen_dual_channel,20,5,64,2,,,,,,,,,,5,2018-2025
+Chip_3ch_clip16,20,5,64,3,,,,,,,,,,5,2018-2025
+Chip_3ch_clip20,20,5,64,3,,,,,,,,,,5,2018-2025

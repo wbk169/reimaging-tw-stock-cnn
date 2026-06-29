@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Licensed / large market data
+data/
+raw_data/
+processed_data/
+*.parquet
+*.feather
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.csv.gz
+
+# Model checkpoints
+checkpoints/
+models/
+*.pt
+*.pth
+*.ckpt
+
+# Large outputs and logs
+outputs/
+runs/
+wandb/
+nohup.out
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
