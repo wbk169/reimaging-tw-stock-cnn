@@ -1,6 +1,6 @@
 model,channel_design,auc,acc,d10_annual_return,d10_sharpe,d10_d1_annual_return,d10_d1_sharpe,data_period,note
 Jiang_single,Jiang 價格圖,0.5422,0.5299,28.48%,1.74,36.39%,5.79,2000-2025,
-retbar_dual,Jiang + 報酬率,,,32.44%,1.80,43.72%,4.40,2000-2025,AUC/ACC 尚未貼
+retbar_dual,Jiang + 報酬率,0.55072,0.535243,32.44%,1.80,43.72%,4.40,2000-2025,
 Chen_dual_channel,OHLC+均線 + 報酬率+成交量,0.5496,0.5350,32.44%,1.81,44.34%,4.70,2000-2025,
 Chip_heatmap_4ch,Jiang + retbar + 買超熱圖 + 賣超熱圖,0.5443,0.5320,30.50%,1.59,36.64%,4.05,2008-2025,三大法人資料限制
 Chip_bar_3ch_clip12,Jiang + retbar + 三大法人柱狀圖,0.5478,0.5332,32.86%,1.73,43.63%,4.68,2008-2025,三大法人資料限制
