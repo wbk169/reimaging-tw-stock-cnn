@@ -1,0 +1,4 @@
+model,period,evaluation,split_mode,window,horizon,height,mean_auc,weighted_auc,mean_acc,weighted_acc,total_test_samples,d10_ann_return,d10_sharpe,d1_ann_return,d1_sharpe,d10_d1_ann_return,d10_d1_sharpe,rebalance_dates,note
+Jiang_single,2000-2025,walk_forward,time,20,5,64,0.5487,0.5486,0.5298,0.5297,3357679,32.25%,1.9493,-10.45%,-0.7221,42.70%,5.9075,376,2000 train start; annual OOS folds 2018-2025; non-overlap portfolio stats
+Chen_2ch,2000-2025,walk_forward,time,20,5,64,0.5513,0.5513,0.5327,0.5325,2943596,31.81%,1.8255,-11.73%,-0.6189,43.54%,4.1688,376,OHLC+MA plus return/volume design; annual OOS folds 2018-2025; non-overlap portfolio stats
+retbar_2ch,2000-2025,walk_forward,time,20,5,64,0.5508,0.5507,0.5305,0.5304,2947230,34.10%,1.8685,-12.53%,-0.6533,46.63%,4.1467,376,Channel 1 Jiang price image; Channel 2 retbar; annual OOS folds 2018-2025; non-overlap portfolio stats
