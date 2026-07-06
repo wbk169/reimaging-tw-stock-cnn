@@ -31,6 +31,7 @@
 | Jiang 單通道 | 2008–2025 | 0.5489 | 0.5317 | 29.99% | 1.7894 | 40.19% | 5.2249 |
 | retbar 雙通道 | 2008–2025 | 0.5489 | 0.5317 | 33.12% | 1.8191 | 42.68% | 3.9880 |
 | Chen 雙通道 | 2008–2025 | 0.5485 | 0.5312 | 29.45% | 1.7181 | 37.92% | 3.7692 |
+| Jiang + 籌碼雙通道 clip12 | 2008–2025 | 0.5414 | 0.5264 | 26.38% | 1.5552 | 30.07% | 4.0131 |
 | Jiang + 籌碼雙通道 clip20 | 2008–2025 | 0.5420 | 0.5262 | 25.50% | 1.4628 | 28.74% | 3.7834 |
 | Jiang 單通道 | 2000–2025 | 0.5487 | 0.5298 | 32.25% | 1.9493 | 42.70% | 5.9075 |
 | Chen 雙通道 | 2000–2025 | 0.5513 | 0.5327 | 31.81% | 1.8255 | 43.54% | 4.1688 |
@@ -139,12 +140,51 @@ wf_train_val_split_mode：time
 
 ---
 
-## 4. Jiang + 籌碼雙通道：2008–2025 walk-forward time split
+## 4. Jiang + 籌碼雙通道 clip12：2008–2025 walk-forward time split
 
 ### 設定
 
 ```text
-模型：Jiang + 籌碼雙通道
+模型：Jiang + 籌碼雙通道 clip12
+第一通道：Jiang 價格圖
+第二通道：chip_total_1d_z signed bar
+資料起始：2008-01-01
+測試期間：2018-01-01 至 2025-12-31
+image_variant：price_chip_total_2ch
+chip_feature_set：total_only
+chip_lag_days：1
+chip_clip：12
+chip_standardize：robust_cs
+wf_train_val_split_mode：time
+輸出資料夾：outputs_wf_2008_price_chip_total_2ch_clip12_W20_H5_time
+```
+
+### 分類結果
+
+| 指標 | 結果 |
+|---|---:|
+| 平均 AUC | 0.5414 |
+| 加權平均 AUC | 0.5413 |
+| 平均 ACC | 0.5264 |
+| 加權平均 ACC | 0.5264 |
+| 測試樣本數合計 | 2,944,372 |
+
+### Non-overlap portfolio
+
+| 組合 | 年化報酬 | 年化波動 | Sharpe |
+|---|---:|---:|---:|
+| D1 | -3.69% | 15.91% | -0.2319 |
+| D10 | 26.38% | 16.96% | 1.5552 |
+| D10-D1 | 30.07% | 7.49% | 4.0131 |
+
+---
+
+## 5. Jiang + 籌碼雙通道 clip20：2008–2025 walk-forward time split
+
+### 設定
+
+```text
+模型：Jiang + 籌碼雙通道 clip20
 第一通道：Jiang 價格圖
 第二通道：chip_total_1d_z signed bar
 資料起始：2008-01-01
@@ -178,7 +218,7 @@ wf_train_val_split_mode：time
 
 ---
 
-## 5. Jiang 單通道：2000–2025 walk-forward time split
+## 6. Jiang 單通道：2000–2025 walk-forward time split
 
 ### 設定
 
@@ -211,7 +251,7 @@ wf_train_val_split_mode：time
 
 ---
 
-## 6. Chen 雙通道：2000–2025 walk-forward time split
+## 7. Chen 雙通道：2000–2025 walk-forward time split
 
 ### 設定
 
@@ -244,7 +284,7 @@ wf_train_val_split_mode：time
 
 ---
 
-## 7. retbar 雙通道：2000–2025 walk-forward time split
+## 8. retbar 雙通道：2000–2025 walk-forward time split
 
 ### 設定
 
@@ -283,7 +323,7 @@ wf_train_val_split_mode：time
 
 2008 起算結果中，retbar 雙通道的 D10 年化報酬與 D10-D1 年化報酬最高；Jiang 單通道的 D10-D1 Sharpe 最高；Chen 雙通道在 2008 起算下沒有超過 Jiang 或 retbar。
 
-Jiang + 籌碼雙通道 clip20 在 2008 起算下沒有改善分類能力或投資組合績效，AUC、ACC、D10 年化報酬與 D10-D1 年化報酬均低於 Jiang 單通道與 retbar 雙通道。此結果表示目前的單一 `chip_total_1d_z` signed bar 加入方式沒有帶來增益。
+Jiang + 籌碼雙通道在 2008 起算下沒有改善分類能力或投資組合績效，clip12 與 clip20 的 AUC、ACC、D10 年化報酬與 D10-D1 年化報酬均低於 Jiang 單通道與 retbar 雙通道。clip12 的投資組合表現略優於 clip20；clip20 的 AUC 略高，但差距很小。
 
 2000 起算結果中，Chen 雙通道的 AUC 與 ACC 最高；retbar 雙通道的 D10 年化報酬與 D10-D1 年化報酬最高；Jiang 單通道的 D10-D1 Sharpe 最高。
 
@@ -291,5 +331,5 @@ Jiang + 籌碼雙通道 clip20 在 2008 起算下沒有改善分類能力或投�
 
 ## 後續待跑
 
-1. 2008 custom 3ch：Jiang + retbar + chip signed bar clip20 walk-forward time split。
+1. 2008 custom 3ch：Jiang + retbar + chip signed bar clip12 或 clip20 walk-forward time split。
 2. 2000 / 2008 系列的 random70 對照結果。
