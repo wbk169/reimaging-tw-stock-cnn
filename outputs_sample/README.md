@@ -1,16 +1,8 @@
-# Outputs Sample
+# 示範圖像與歷史素材
 
-本資料夾用來放置可公開展示的樣本輸出。
+這個資料夾保留供理解公開程式使用的**示範輸出**，並非最終論文的正式模型輸入或結果圖表。
 
-目前包含：
+- `sample_images/sample_001.png`：以 `scripts/make_sample_image.py` 的合成 OHLC 資料繪製的**簡化單通道示例**。目前示範程式未實作最終論文所需的移動平均線、成交量及第二個每日報酬通道。
+- `research_flow.png`：較早期研究規劃的流程圖，包含籌碼、交易成本及統計檢定相關步驟；**不能視為最終論文流程已完整實作的證據**。
 
-1. research_flow.png：研究流程圖。
-2. sample_images/sample_001.png：OHLC 價格影像範例。
-
-待正式實驗完成後，將補上：
-
-1. decile_returns.png
-2. cumulative_return.png
-3. drawdown.png
-4. bootstrap_test.png
-5. monthly_returns.png
+最終論文的核心架構及成果，以專案 [README](../README.md) 和 [正式論文方法文件](../docs/methodology.md) 為準；此資料夾不包含正式論文圖 3-3、圖 3-4 的完整對應圖像。
