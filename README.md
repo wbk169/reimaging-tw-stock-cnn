@@ -129,6 +129,6 @@ python scripts/make_sample_image.py
 ## 論文資訊（Citation）
 
 王柏凱（2026）。《基於卷積神經網路之臺股雙通道價格圖像投資策略》。中原大學資訊管理學系碩士論文。  
-*Wang (2026), A CNN-Based Dual-Channel Price-Image Investment Strategy for Taiwan Stocks.*
+英文題名：*A CNN-Based Dual-Channel Price-Image Investment Strategy for Taiwan Stocks.*
 
 本專案的原始 TEJ 資料及其他有授權限制的素材不公開；程式碼的公開不代表取得資料授權或具有可用於實盤的投資策略。
