@@ -22,6 +22,12 @@
 
 參考文獻：Jiang、Kelly 與 Xiu（2023），[(Re-)Imag(in)ing Price Trends](https://economics.yale.edu/research/re-imagining-price-trends)，尤其「影像表示與時間序列表示」一節，作者亦明確承認不能排除妥善設計的 LSTM 在其他比較下取得更好結果的可能性。
 
+## 方法圖解：兩個通道如何一起輸入 CNN？
+
+以下示意圖依正式論文第 3.4 節的兩通道設計製作。**價格與每日報酬必須以相同交易日期對齊**，但示意資料為人工合成，不是 TEJ 原始數據或論文的原始模型圖片。
+
+![雙通道圖像概念示意](figures/dual_channel_explainer.svg)
+
 ## 1. 研究問題
 
 - **RQ1：** 價格圖像的觀察／預測期間及分類或成對排序學習，如何影響同日股票排序？
